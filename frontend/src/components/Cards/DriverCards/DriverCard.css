@@ -1,0 +1,52 @@
+/* DriverCard.css */
+
+.driver-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.responsive-card {
+  width: 300px; /* Set a fixed width for each card */
+  margin: 16px; /* Add margin for spacing between cards */
+  overflow: hidden; /* Hide any content that exceeds the fixed height */
+}
+
+.responsive-card > div {
+  height: 350px; /* Set a fixed height for each card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.ad-details {
+  display: flex;
+}
+
+.card-grid {
+  display: grid;
+  /* grid grid-cols-1 md:grid-cols-3  */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media only screen and (max-width: 965px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/* 
+@media only screen and (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+} */
