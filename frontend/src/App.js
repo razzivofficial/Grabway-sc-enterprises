@@ -1,4 +1,10 @@
-// import "./App.css";
+import React, { useState, useEffect, useContext } from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+// import Navbar from "./components/Navbar/Navbar";
+// import Footer from "./components/Footer/footer";
+// import Homepage from "./Pages/HomePage/Homepage";
+// import Support from "./Pages/Support/Support.jsx";
+
 
 function App() {
   return (
