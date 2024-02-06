@@ -1,0 +1,131 @@
+/* Registration.css */
+.background-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  width: 100%;
+  height: auto; /* Use viewport height for full-screen effect */
+  overflow: hidden;
+  position: relative;
+}
+
+.background-gif {
+    padding: 1% 1% 0% 7%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the GIF cover the entire container */
+  z-index: -1; /* Place it behind other content */
+}
+
+
+.container-reg {
+  padding: 40px;
+}
+
+/* Style for the heading */
+.heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for the text */
+.text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Style for the buttons */
+.button {
+  margin-top: 20px;
+  background-color: teal;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #008080;
+}
+
+/* Style for the tab list */
+.tab-list {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Style for the individual tabs */
+.tab {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  background-color: #f0f0f0;
+  color: #444;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:focus {
+  outline: none;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Style for the tab panels */
+.tab-panel {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for input fields */
+.input {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Style for the radio buttons */
+.radio-group {
+  margin-bottom: 20px;
+}
+
+/* Style for the select input */
+.select {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Style for the submit button */
+.submit-button {
+  background-color: teal;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #008080;
+}

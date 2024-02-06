@@ -1,0 +1,14 @@
+@media only screen and (max-width: 500px) {
+    .topbar .logo-text {
+      display: none;
+    }
+    .topbar .weather-info{
+      display:none;
+    }
+  }
+
+.topbar{
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
