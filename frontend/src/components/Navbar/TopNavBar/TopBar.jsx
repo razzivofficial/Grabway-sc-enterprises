@@ -389,7 +389,7 @@ const TopBar = ({ counter, setCounter, setLoginState, loginState }) => {
         <Link to="/">
           <div className="flex flex-row justify-center items-center">
             <div className="logo-text flex flex-row justify-center items-center text-2xl font-ubuntu">
-              GrabWay
+              GrabWay-Enterprises
             </div>
             <div className="flex justify-center items-center">
               <img src="/assets/images/logo.png" alt="logo" />
