@@ -529,6 +529,7 @@ const TopSection = ({ nonceVal, loginState }) => {
                   <Box
                     d="flex"
                     justifyContent="center"
+                    alignItems="center" // Center both horizontally and vertically
                     w={{ base: "100%", sm: "auto" }}
                     border="1px solid"
                     borderColor="gray.300"
@@ -543,7 +544,6 @@ const TopSection = ({ nonceVal, loginState }) => {
                     zIndex={55555555}
                   >
                     Dwonload App <Icon as={FcDownload} h={4} w={4} ml={1} />
-                    {/* <FcDownload /> */}
                   </Box>
                 </HStack>
               </Stack>
@@ -809,7 +809,149 @@ const TopSection = ({ nonceVal, loginState }) => {
           </Button>
         </div> */}
         {/* Herosection mobile view code started */}
-
+        <div>
+          <Container maxW="6xl" px={{ base: 6, md: 3 }} py={20}>
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              justifyContent="center"
+            >
+              <Stack
+                direction="column"
+                spacing={6}
+                justifyContent="center"
+                maxW="480px"
+              >
+                <HStack
+                  as={Link}
+                  p={1}
+                  rounded="full"
+                  fontSize="sm"
+                  w="max-content"
+                  // bg={useColorModeValue("gray.300", "gray.700")}
+                >
+                  <Box
+                    py={1}
+                    px={2}
+                    lineHeight={1}
+                    rounded="full"
+                    color="white"
+                    bgGradient="linear(to-l, #0ea5e9,#2563eb)"
+                  >
+                    What's new
+                  </Box>
+                  <HStack
+                    spacing={1}
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <Text lineHeight={1}>See our recent updates</Text>
+                    <Icon as={GoChevronRight} w={4} h={4} />
+                  </HStack>
+                </HStack>
+                {/* <chakra.h1
+                  fontSize="5xl"
+                  lineHeight={1}
+                  fontWeight="bold"
+                  textAlign="left"
+                >
+                  Grabway Promises <br />
+                  <chakra.span color="teal">Effortless Scheduling</chakra.span>
+                  <chakra.span color="teal">
+                    Smart Routing for Efficient Rides
+                  </chakra.span>
+                  <chakra.span color="teal">Safety-First Approach</chakra.span>
+                </chakra.h1> */}
+                <chakra.h1
+                  fontSize="5xl"
+                  lineHeight={1}
+                  fontWeight="bold"
+                  textAlign="left"
+                >
+                  Grabway Promises <br />
+                  {currentText.split("\n").map((item, index) => (
+                    <chakra.span key={index} color="teal">
+                      {item}
+                      <br />
+                    </chakra.span>
+                  ))}
+                </chakra.h1>
+                <Text
+                  fontSize="1.2rem"
+                  textAlign="left"
+                  lineHeight="1.375"
+                  fontWeight="400"
+                  color="gray.500"
+                >
+                  Elevating Campus Travel - Your go-to platform for hassle-free
+                  rides, connecting students seamlessly while prioritizing
+                  convenience and safety. Grab your ride, grab your way!
+                </Text>
+                <HStack
+                  spacing={{ base: 0, sm: 2 }}
+                  mb={{ base: "3rem !important", sm: 0 }}
+                  flexWrap="wrap"
+                >
+                  <chakra.button
+                    w={{ base: "100%", sm: "auto" }}
+                    h={12}
+                    px={6}
+                    color="white"
+                    size="lg"
+                    rounded="md"
+                    mb={{ base: 2, sm: 0 }}
+                    zIndex={5}
+                    lineHeight={1}
+                    bgGradient="linear(to-l, #0ea5e9,#2563eb)"
+                    _hover={{
+                      bgGradient: "linear(to-l, #0ea5e9,#2563eb)",
+                      opacity: 0.9,
+                    }}
+                  >
+                    <a
+                      href="https://grabway.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore Grabway Commercial
+                    </a>
+                    <Icon as={MdBolt} h={4} w={4} ml={1} />
+                  </chakra.button>
+                  <Box
+                    d="flex"
+                    justifyContent="center"
+                    alignItems="center" // Center both horizontally and vertically
+                    w={{ base: "100%", sm: "auto" }}
+                    border="1px solid"
+                    borderColor="gray.300"
+                    p={3}
+                    lineHeight={1.18}
+                    rounded="md"
+                    boxShadow="md"
+                    cursor="pointer"
+                    onClick={() =>
+                      window.open("/", "_blank", "noopener noreferrer")
+                    }
+                    zIndex={55555555}
+                  >
+                    Dwonload App <Icon as={FcDownload} h={4} w={4} ml={1} />
+                  </Box>
+                </HStack>
+              </Stack>
+              {/* <Box ml={{ base: 0, md: 5 }} pos="relative">
+                <DottedBox />
+                <Image
+                  w="100%"
+                  h="100%"
+                  minW={{ base: "auto", md: "30rem" }}
+                  objectFit="cover"
+                  src={`https://media4.giphy.com/media/HwukO9Ia7E3YQMEIHu/giphy.gif?cid=ecf05e47urbk1rnwu2bm0hzuxpi57suuk6sv91cxrk4443ko&ep=v1_gifs_related&rid=giphy.gif&ct=s`}
+                  rounded="md"
+                  fallback={<Skeleton />}
+                />
+              </Box> */}
+            </Stack>
+          </Container>
+        </div>
         {/* Herosection mobile view code ended*/}
         {loginState === false && (
           <div className="info-section mt-[5%] flex flex-col justify-center items-center gap-10">
