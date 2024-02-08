@@ -437,8 +437,8 @@ const TopSection = ({ nonceVal, loginState }) => {
                   fontWeight="bold"
                   textAlign="left"
                 >
-                  Build products faster <br />
-                  <chakra.span color="teal">in ChakraUI</chakra.span>
+                  Grabway Promises <br />
+                  <chakra.span color="teal">Effortless Scheduling</chakra.span>
                 </chakra.h1>
                 <Text
                   fontSize="1.2rem"
@@ -447,8 +447,9 @@ const TopSection = ({ nonceVal, loginState }) => {
                   fontWeight="400"
                   color="gray.500"
                 >
-                  TemplatesKart provides the best ChakraUI templates. Focus on
-                  your business, not on the boilerplate.
+                  Elevating Campus Travel - Your go-to platform for hassle-free
+                  rides, connecting students seamlessly while prioritizing
+                  convenience and safety. Grab your ride, grab your way!
                 </Text>
                 <HStack
                   spacing={{ base: 0, sm: 2 }}
@@ -642,14 +643,14 @@ const TopSection = ({ nonceVal, loginState }) => {
       </div>
 
       <div className="mobile-view">
-        <div>
+        {/* <div>
           <img
             className="h-[20vh]"
             src="/assets/images/loginImage.jpg"
             alt=""
           />
-        </div>
-        <div className="flex justify-center items-center">
+        </div> */}
+        {/* <div className="flex justify-center items-center">
           <Card variant="filled" sx={{ boxShadow: "0px 0px 0px 10px white" }}>
             <CardHeader>
               <Heading size="lg">
@@ -692,8 +693,8 @@ const TopSection = ({ nonceVal, loginState }) => {
               </Text>
             </CardBody>
           </Card>
-        </div>
-        <div className="flex justify-center items-center">
+        </div> */}
+        {/* <div className="flex justify-center items-center">
           <Card variant="filled" sx={{ boxShadow: "0px 0px 0px 10px white" }}>
             <CardHeader>
               <Heading size="lg">
@@ -752,7 +753,10 @@ const TopSection = ({ nonceVal, loginState }) => {
           >
             <div className="font-ubuntu text-2xl">Search GrabWay</div>
           </Button>
-        </div>
+        </div> */}
+        {/* Herosection mobile view code started */}
+
+        {/* Herosection mobile view code ended*/}
         {loginState === false && (
           <div className="info-section mt-[5%] flex flex-col justify-center items-center gap-10">
             <div className="flex flex-col justify-center items-center">
