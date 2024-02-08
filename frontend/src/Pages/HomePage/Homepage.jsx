@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import "./Homepage.css";
 import Geocode from "react-geocode";
 import { Navigator } from "react-router-dom";
+import { FcDownload } from "react-icons/fc";
 import {
   Input,
   InputGroup,
@@ -419,7 +420,7 @@ const TopSection = ({ nonceVal, loginState }) => {
           </div>
         </div>*/}
         <div>
-          <Container maxW="6xl" px={{ base: 6, md: 3 }} py={24}>
+          <Container maxW="6xl" px={{ base: 6, md: 3 }} py={20}>
             <Stack
               direction={{ base: "column", md: "row" }}
               justifyContent="center"
@@ -516,13 +517,18 @@ const TopSection = ({ nonceVal, loginState }) => {
                       opacity: 0.9,
                     }}
                   >
-                    <chakra.span> Explore ComponentsKart </chakra.span>
+                    <a
+                      href="https://grabway.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore Grabway Commercial
+                    </a>
                     <Icon as={MdBolt} h={4} w={4} ml={1} />
                   </chakra.button>
                   <Box
                     d="flex"
                     justifyContent="center"
-                    // bg={useColorModeValue("white", "gray.800")}
                     w={{ base: "100%", sm: "auto" }}
                     border="1px solid"
                     borderColor="gray.300"
@@ -530,10 +536,14 @@ const TopSection = ({ nonceVal, loginState }) => {
                     lineHeight={1.18}
                     rounded="md"
                     boxShadow="md"
-                    as={Link}
+                    cursor="pointer"
+                    onClick={() =>
+                      window.open("/", "_blank", "noopener noreferrer")
+                    }
                     zIndex={55555555}
                   >
-                    Watch Video
+                    Dwonload App <Icon as={FcDownload} h={4} w={4} ml={1} />
+                    {/* <FcDownload /> */}
                   </Box>
                 </HStack>
               </Stack>
