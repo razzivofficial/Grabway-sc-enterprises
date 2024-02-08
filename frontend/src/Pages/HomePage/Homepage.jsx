@@ -499,8 +499,7 @@ const TopSection = ({ nonceVal, loginState }) => {
                   h="100%"
                   minW={{ base: "auto", md: "30rem" }}
                   objectFit="cover"
-                  src={`https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&q=80&
-            fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80`}
+                  src={`https://media4.giphy.com/media/HwukO9Ia7E3YQMEIHu/giphy.gif?cid=ecf05e47urbk1rnwu2bm0hzuxpi57suuk6sv91cxrk4443ko&ep=v1_gifs_related&rid=giphy.gif&ct=s`}
                   rounded="md"
                   fallback={<Skeleton />}
                 />
