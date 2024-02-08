@@ -42,6 +42,32 @@ import { useJsApiLoader } from "@react-google-maps/api";
 import { Autocomplete } from "@react-google-maps/api";
 import Cookies from "js-cookie";
 const TopSection = ({ nonceVal, loginState }) => {
+  const textArray = [
+    "Effortless Scheduling",
+    "Smart Routing",
+    "Safety-First Focus",
+  ];
+
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      const currentTextArray = textArray[currentIndex];
+      setCurrentText((prevText) => {
+        if (prevText === currentTextArray) {
+          setTimeout(() => {
+            setCurrentText("");
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % textArray.length);
+          }, 1500); // Adjust the delay between phrases
+        }
+        return currentTextArray.substring(0, prevText.length + 1);
+      });
+    }, 100); // Adjust the typing speed
+
+    return () => clearInterval(typingInterval);
+  }, [currentText, currentIndex]);
+
   const [currLocation, setCurrlocation] = useState({});
   useEffect(() => {
     if (navigator.geolocation) {
@@ -431,7 +457,7 @@ const TopSection = ({ nonceVal, loginState }) => {
                     <Icon as={GoChevronRight} w={4} h={4} />
                   </HStack>
                 </HStack>
-                <chakra.h1
+                {/* <chakra.h1
                   fontSize="5xl"
                   lineHeight={1}
                   fontWeight="bold"
@@ -439,6 +465,24 @@ const TopSection = ({ nonceVal, loginState }) => {
                 >
                   Grabway Promises <br />
                   <chakra.span color="teal">Effortless Scheduling</chakra.span>
+                  <chakra.span color="teal">
+                    Smart Routing for Efficient Rides
+                  </chakra.span>
+                  <chakra.span color="teal">Safety-First Approach</chakra.span>
+                </chakra.h1> */}
+                <chakra.h1
+                  fontSize="5xl"
+                  lineHeight={1}
+                  fontWeight="bold"
+                  textAlign="left"
+                >
+                  Grabway Promises <br />
+                  {currentText.split("\n").map((item, index) => (
+                    <chakra.span key={index} color="teal">
+                      {item}
+                      <br />
+                    </chakra.span>
+                  ))}
                 </chakra.h1>
                 <Text
                   fontSize="1.2rem"
