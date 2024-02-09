@@ -131,7 +131,7 @@ If you have any feedback or suggestions please reach out to the Project-Maintain
 
 <div align="center">
 
-[![Collaborators](https://contrib.rocks/image?repo=addymistrel/GrabWay)](https://github.com/addymistrel/GrabWay/graphs/contributors)
+[![Collaborators](https://contrib.rocks/image?repo=razzivofficial/Grabway-sc-enterprises)](https://github.com/razzivofficial/Grabway-sc-enterprises/graphs/contributors)
 
 ## Thanks to all Collaborators 💪
 
