@@ -4,6 +4,8 @@ import "./Homepage.css";
 import Geocode from "react-geocode";
 import { Navigator } from "react-router-dom";
 import { FcDownload } from "react-icons/fc";
+import HomeInfo from "../../components/HomeInfo/HomeInfo";
+
 import {
   Input,
   InputGroup,
@@ -562,6 +564,7 @@ const TopSection = ({ nonceVal, loginState }) => {
             </Stack>
           </Container>
         </div>
+        <HomeInfo />
         {loginState === false && (
           <>
             <div className="scroller">
@@ -808,6 +811,7 @@ const TopSection = ({ nonceVal, loginState }) => {
             <div className="font-ubuntu text-2xl">Search GrabWay</div>
           </Button>
         </div> */}
+
         {/* Herosection mobile view code started */}
         <div>
           <Container maxW="6xl" px={{ base: 6, md: 3 }} py={20}>
