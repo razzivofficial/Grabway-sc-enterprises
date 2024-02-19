@@ -168,10 +168,12 @@ export default function Sidebar({
             </li>
             <li>
               <Link
-                to={datauser?
-                  datauser.userType === "user"
-                    ? "/userPackages"
-                    : "/driverpackage":"/"
+                to={
+                  datauser
+                    ? datauser.userType === "user"
+                      ? "/userPackages"
+                      : "/driverpackage"
+                    : "/"
                 }
               >
                 <div className="items-list-side">
@@ -200,8 +202,10 @@ export default function Sidebar({
               <div className="profile-details">
                 <img src="/assets/images/user.png" alt="profileImg" />
                 <div className="name_job">
-                  <div className="name">{name?name:""}</div>
-                  <div className="job">{userType?userType.toUpperCase():""}</div>
+                  <div className="name">{name ? name : ""}</div>
+                  <div className="job">
+                    {userType ? userType.toUpperCase() : ""}
+                  </div>
                 </div>
               </div>
               <i
