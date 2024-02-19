@@ -12,7 +12,6 @@ import "./TopSlider.css";
 export default function TopSlider() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
-
   const slides = [
     {
       image:
@@ -36,7 +35,7 @@ export default function TopSlider() {
     setTimeout(() => {
       setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
       setFadeIn(true);
-    },100); // Delay to change slide after fade-out animation
+    },100); 
   };
 
   const prevSlide = () => {
@@ -46,13 +45,13 @@ export default function TopSlider() {
         (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
       );
       setFadeIn(true);
-    }, 100); // Delay to change slide after fade-out animation
+    }, 100); 
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3500); // Auto-advance every 5 seconds
+    }, 3500); 
 
     return () => {
       clearInterval(interval);
