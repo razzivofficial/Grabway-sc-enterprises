@@ -1,6 +1,6 @@
 <div align="center">
    <img src="https://github.com/addymistrel/Homeify/assets/102992848/e0a3d5ed-31f6-4ecb-904a-e1dd2c325c03" alt="npm" />
-    <h1>GrabWay</h1>
+    <h1>GrabWay-Ent</h1>
 </div>
 
 ## Live Link
