@@ -30,6 +30,11 @@ import {
   chakra,
   Icon,
   Flex,
+  Wrap,
+  WrapItem,
+  Center,
+  FormControl,
+  Select,
 } from "@chakra-ui/react";
 import { GoChevronRight } from "react-icons/go";
 import { MdBolt } from "react-icons/md";
@@ -422,6 +427,67 @@ const TopSection = ({ nonceVal, loginState }) => {
             </div>
           </div>
         </div>*/}
+        <div
+          className="sruti"
+          maxW="90%"
+          w={{ base: "100%", sm: "auto" }}
+        >
+          <>
+            <img
+              src="https://cdn.blablacar.com/kairos/assets/images/carpool_blablabus_large-e3d8eff32c13cdafc080.svg"
+              alt="background"
+              w={{ base: "100%", sm: "auto" }}
+              class="h-20vh w-full"
+            ></img>
+            <Wrap spacing="0" justify="center" bg={"white"} mx="-2">
+              <WrapItem>
+                <Center>
+                  <FormControl isRequired>
+                    <Input placeholder="Leaving From ..." />
+                  </FormControl>
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center>
+                  <FormControl isRequired>
+                    <Input placeholder="Going to ..." />
+                  </FormControl>
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center w="10rem" h="5rem">
+                  <Input
+                    placeholder="Select Date and Time"
+                    size="md"
+                    type="datetime-local"
+                  />
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center w="10rem" h="5rem">
+                  <FormControl>
+                    <Select placeholder="Individuals?">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </Select>
+                  </FormControl>
+                </Center>
+              </WrapItem>
+              <WrapItem>
+                <Center
+                  w="10rem"
+                  h="5rem"
+                  bg="lightBlue"
+                  sx={{ color: "white" }}
+                >
+                  Search
+                </Center>
+              </WrapItem>
+            </Wrap>
+          </>
+        </div>
         <div>
           <Container maxW="90%" px={{ base: 6, md: 3 }} py={20}>
             <Stack
